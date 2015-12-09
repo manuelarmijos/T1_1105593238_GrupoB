@@ -1,0 +1,98 @@
+\documentclass[11pt]{report}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{Sweave}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{anysize} 
+\marginsize{1.78cm}{1.65cm}{1.78cm}{1.78cm} 
+
+\title{\Huge Universidad Nacional de Loja \\ 
+Área de la Energía las Industrias y los Recursos Naturales no Renovables}
+\author{\includegraphics[width=5cm, height=5cm]{unl.jpg} \\\\\\\\
+Ingeniería en Sistemas\\\\
+\textbf{La supervivencia de los pasajeros del Titanic}\\\\
+Manuel Stalin Armijos Ordóñez \\ msarmijoso@unl.edu.ec \\\\
+ ECINF7225}\\\\
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\maketitle
+
+
+\begin{center}\textbf{¿Es aplicable la ingeniería de software cuando se elaboran webapps? Si es así, ¿cómo puede
+modificarse para que asimile las características únicas de éstas?}\end{center}
+
+\text{Si es aplicable ya que cuando elaboramos webapps tenemos que seguir un proceso y la ingenieria del software nos da un enfoque sistemático, disciplinado y cuantificable al desarrollo, operación y mantenimiento, y  para asimilar las caracterízticas de las websapp deberiamos utilizar solo los procesos y herramientas del software que se necesitemos que se adapten a nuesta web app , tambien dependera utilizar estos procesos y herramientas dependiendo del tamaño de nuestro proyecto.}
+
+
+\begin{center}\textbf{DESCRIPCION TITANIC}\end{center}
+\begin{center}\textbf{La supervivencia de los pasajeros del Titanic}\end{center}
+\textbf{Descripción}\\
+Este conjunto de datos proporciona información sobre el destino de los pasajeros en el primer viaje fatal del trasatlántico Titanic, que se resumen de acuerdo a la situación económica (clase), el sexo, la edad y la supervivencia.
+\\\\
+\textbf{Uso:}\\
+TITANICO.
+\\\\
+\textbf{Formato}\\
+Una matriz de 4-dimensional resultante de cruzada tabular 2201 observaciones sobre 4 variables. Las variables y sus niveles son los siguientes:\\
+
+No	Nombre	Niveles\\
+1	Clase	Primero, segundo, tercero, Tripulación\\
+2	Sexo	Hombre, Mujer\\
+3	Años	Niño, Adulto\\
+4	Sobrevivieron	No si\\
+
+\\\\
+\textbf{Detalles}\\
+
+El hundimiento del Titanic es un evento famoso, y nuevos libros siguen siendo publicado sobre el tema. Muchos hechos-de conocidas las proporciones de los pasajeros de primera clase a la política de "mujeres y niños primero ', y el hecho de que esa política no era un éxito completo en el ahorro de las mujeres y niños en la tercera clase se reflejan en la supervivencia tarifas de diversas clases de pasajeros.
+
+Estos datos fueron recogidos originalmente por la Junta Británica de Comercio en su investigación del hundimiento. Tenga en cuenta que no hay un acuerdo completo entre las fuentes primarias como a las cifras exactas a bordo, rescatados, o perdidos.
+
+Debido, en particular, a la película de gran éxito 'Titanic', los últimos años vieron un aumento en el interés público en el Titanic. Datos muy detallados sobre los pasajeros ya está disponible en Internet, en sitios como la Enciclopedia Titanica (http://www.rmplc.co.uk/eduweb/sites/phind).
+
+\\\\
+\textbf{Fuente}\\
+
+\item Dawson, Robert J. MACG. (1995), El 'Episodio inusual' Datos Revisited. Diario de Estadísticas de Educación, 3. Http://www.amstat.org/publications/jse/v3n3/datasets.dawson.html\\
+
+La fuente proporciona un conjunto de datos de clase de grabación, el sexo, la edad y el estado de supervivencia para cada persona a bordo del Titanic, y se basa en datos recogidos originalmente por la Junta Británica de Comercio y reimpresos en:
+
+Junta Británica de Comercio (1990), Informe sobre la pérdida del 'Titanic' (SS). Junta Británica de Comercio Informe Investigación (reimpresión). Gloucester, Reino Unido: Allan Sutton Publishing.
+\end{itemize}
+
+\\\\
+\textbf{Ejemplos}\\
+require(graphics)\\
+mosaicplot(Titanic, main = "Survival on the Titanic")\\
+## Higher survival rates in children?\\
+apply(Titanic, c(3, 4), sum)\\
+## Higher survival rates in females?\\
+apply(Titanic, c(2, 4), sum)\\
+## Use loglm() in package 'MASS' for further analysis ...
+\\\\\\
+
+\\\\
+\textbf{DESCRIPCION DATASET TITANIC}
+
+<<eval=TRUE, echo=FALSE>>=
+  require(utils)
+
+Titanic
+
+@
+  \\\\\\
+\textbf{¿Cuál es el número total de casos en el dataset?}
+
+<<eval=TRUE, echo=FALSE>>=
+require(utils)
+print("EXISTEN")
+sum(Titanic)
+print("CASOS")
+
+@
+
+
+\end{document}
+
